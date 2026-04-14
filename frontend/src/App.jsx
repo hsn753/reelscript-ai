@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 import {
-  Instagram,
+  Film,
   Sparkles,
   FileText,
   TrendingUp,
@@ -256,7 +256,7 @@ export default function App() {
   }
 
   const tabs = [
-    { id: 'analyze', label: 'Analyze', icon: Instagram, disabled: false },
+    { id: 'analyze', label: 'Analyze', icon: Film, disabled: false },
     { id: 'style', label: 'Style Profile', icon: TrendingUp, disabled: !analysisResult },
     { id: 'generate', label: 'Generate Script', icon: Sparkles, disabled: !analysisResult },
     { id: 'script', label: 'Script', icon: FileText, disabled: !script },
@@ -269,7 +269,7 @@ export default function App() {
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
-              <Instagram size={16} className="text-white" />
+              <Film size={16} className="text-white" />
             </div>
             <div>
               <h1 className="text-base font-semibold text-white leading-none">ReelScript AI</h1>
@@ -375,7 +375,7 @@ export default function App() {
                   </>
                 ) : (
                   <>
-                    <Instagram size={18} />
+                    <Film size={18} />
                     Analyze Reels
                     <ChevronRight size={16} />
                   </>
