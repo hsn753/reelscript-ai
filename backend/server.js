@@ -28,7 +28,7 @@ app.post('/analyze', async (req, res) => {
     console.log(`[analyze] Scraping reels for @${username}, max: ${maxReels}`);
 
     const run = await apifyClient.actor('apify/instagram-reel-scraper').call({
-      directUrls: [`https://www.instagram.com/${username}/`],
+      username: [username],
       resultsLimit: parseInt(maxReels),
     });
 
